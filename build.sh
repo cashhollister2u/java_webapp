@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#########################################################
+# The purpose of this script it to provide auto         #
+# updates to Apache Tomcat when a file is updated/saved #
+#########################################################
 
 # Function to handle hot refresh
 refresh() {
