@@ -1,0 +1,90 @@
+/* style.css */ 
+
+body {
+    background-color: rgb(56, 56, 56);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#name {
+    font-size: xx-large;
+}
+
+#main {
+ margin: 60px;
+}
+
+#projects {
+    color: rgb(75, 84, 221);
+    max-width: 50%;
+}
+
+#projectsMain{
+    margin-top: -20px;
+    margin-left: 40px;
+}
+
+#githublink{
+    margin-left: 30px;
+}
+
+#projectLinks {
+    font-size: x-large;
+}
+
+#miniProjectLinks {
+    font-size: medium;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.textLinks {
+    color: grey;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    
+}
+
+.textLinks:hover {
+    color: rgb(75, 84, 221);
+}
+
+.links {
+    width: fit-content;
+    display: block;
+    color: darkgrey;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.links:hover {
+    color: rgb(75, 84, 221);
+}
+
+.projectHeader {
+    margin-left: 5px;
+}
+
+.projectInd {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgb(30, 30, 30)
+}
+
+.projectImages {
+    margin-top: 10px;
+    margin-left: 5px;
+    max-width: 350px;
+    height: auto;
+    transition: max-width 0.3s ease;
+}
+
+.projectImages:hover {
+    max-width: 600px;
+    height: auto;
+}
+
+.projectDescription{
+    color: darkgrey;
+    margin-left: 5px;
+    font-size: small;
+}
