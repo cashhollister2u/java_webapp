@@ -25,9 +25,10 @@
                     <div id="Project2" class="projectInd">
                         <a class="links" id="projectLinks" href="https://github.com/cashhollister2u/GooseApp-Tauri">[Goose.com]</a>
                         <a class="links" id="miniProjectLinks" href="https://github.com/cashhollister2u/gooseBackend_deployed">[Goose.com Backend Repository]</a>
+                        <a class="links" id="miniProjectLinks" href="https://github.com/cashhollister2u/cashhollister2u/releases/tag/v0.1.0">[Goose.com Download]</a>
                         <img id="gooseDashboard" class="projectImages" src="images/gooseDashboard.png">
                         <h3>Description:</h3>
-                        <p class="projectDescription">This was my first real project and first ever web development project. It is a social media clone focused on sharing stock market prefrences. 
+                        <p class="projectDescription">This was my first real project and first ever web development project (the code is a mess). It is a social media clone focused on sharing stock market prefrences. 
                                                       The project allows the user to create and modify an account, send encrypted messages and follow other users, and track the most common stocks mentioned.
                                                       I gained indepth knowledge of the structure and communication between the frontend and backend. I was able to gain further insight on the deployment 
                                                       of fullstack web applications and serverside configurations. 
