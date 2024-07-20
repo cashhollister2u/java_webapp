@@ -51,7 +51,7 @@ echo ""
 /usr/local/tomcat9/bin/startup.sh 
 
 # when change occures in "src" dir run the refresh function above
-find src -type f | entr -r bash -c 'refresh'
+find src -type f | entr -r bash -c ./refresh.sh
 
 #close server when script ends
 shutdown
