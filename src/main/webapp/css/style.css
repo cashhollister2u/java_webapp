@@ -15,11 +15,9 @@ body {
 
 #projects {
     color: rgb(75, 84, 221);
-    max-width: 50%;
 }
 
 #projectsMain{
-    margin-top: -20px;
     margin-left: 40px;
 }
 
@@ -35,6 +33,19 @@ body {
     font-size: medium;
     margin-top: 5px;
     margin-left: 5px;
+}
+
+#gooseDashboard {
+    display: inline-block;
+    margin-top: 10px;
+    max-width: 250px;
+    transition: max-width 0.3s ease;
+    z-index: 1;
+}
+
+#gooseDashboard:hover {
+    max-width: 500px;
+    z-index: 3;
 }
 
 .textLinks {
@@ -65,26 +76,39 @@ body {
 }
 
 .projectInd {
-    padding-top: 20px;
     padding-bottom: 20px;
-    border-bottom: 2px solid rgb(30, 30, 30)
+}
+
+.imageContainer {
+    display: flex;
 }
 
 .projectImages {
+    display: inline-block;
     margin-top: 10px;
-    margin-left: 5px;
-    max-width: 350px;
-    height: auto;
-    transition: max-width 0.3s ease;
+    margin-left: -60px;
+    max-width: 200px;
+    transform: perspective(1000px) rotateY(40deg);
+    transition: transform 0.3s ease, max-width 0.3s ease;
+    z-index: 1;
+
+}
+
+.projectImages:first-child{
+    margin-left: 0;
 }
 
 .projectImages:hover {
-    max-width: 600px;
-    height: auto;
+    max-width: 250px;
+    transform: perspective(1000px) rotateY(0deg) translateX(-50px);
+    z-index: 3;
 }
 
 .projectDescription{
     color: darkgrey;
     margin-left: 5px;
     font-size: small;
+    max-width: 50%;
+    padding-bottom: 30px;
+    border-bottom: 2px solid rgb(30, 30, 30)
 }
