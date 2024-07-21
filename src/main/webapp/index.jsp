@@ -9,6 +9,7 @@
         <div id="main">
             <div id="header">
                 <a class="links" id="name" href="https://github.com/cashhollister2u">[Cash Hollister]</a>
+                <p>name: ${signatureData.name} </p>
             </div>
             <div id="projects">
                 <h2 class="projectHeader">Projects:</h2>
