@@ -1,21 +1,28 @@
 package com.CashHollister;
 
+import java.io.IOException;
+
 public class SignatureData {
     private String name;
-    private int signatureIndex;
+    private String comment;
 
     // Constructor
-    public SignatureData(String name, int signatureIndex) {
+    public SignatureData(String name, String comment) {
         this.name = name;
-        this.signatureIndex = signatureIndex;
+        this.comment = comment;
     }
 
-    // Getters and Setters
+    // Getters
     public String getName() {
         return name;
     }
 
-    public int getSignatureIndex() {
-        return signatureIndex;
+    public String getSignatureIndex() {
+        return comment;
     }
+
+    // Method to save the object to a JSON file
+    public void saveToJsonFile() throws IOException{
+       WriteToJson.saveToJsonFile(name, comment);
+    } 
 }

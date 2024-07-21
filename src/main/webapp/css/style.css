@@ -80,16 +80,16 @@ body {
 }
 
 .imageContainer {
-    display: flex;
+    width: 75%;
 }
 
+
 .projectImages {
-    display: inline-block;
-    margin-top: 10px;
-    margin-left: -60px;
-    max-width: 200px;
+    margin-top: 20px;
+    margin-left: -110px;
+    max-width: 240px;
     transform: perspective(1000px) rotateY(40deg);
-    transition: transform 0.3s ease, max-width 0.3s ease;
+    transition: transform 0.3s ease;
     z-index: 1;
 
 }
@@ -99,8 +99,7 @@ body {
 }
 
 .projectImages:hover {
-    max-width: 250px;
-    transform: perspective(1000px) rotateY(0deg) translateX(-50px);
+    transform: perspective(1000px) rotateY(0deg) translateX(-90px);
     z-index: 3;
 }
 

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Personal Java Web Page</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css">
     </head>
     <body>
         <div id="main">
@@ -21,7 +21,6 @@
                                 <img id="matrixClock" class="projectImages" src="images/matrixClock.png">
                                 <img id="matrixStock" class="projectImages" src="images/matrixStock.png">
                                 <img id="matrixClockStock" class="projectImages" src="images/matrixClockStock.png">
-                                <img id="matrixOff" class="projectImages" src="images/matrixOff.png">
                             </div>
                         <h3>Description:</h3>
                         <p class="projectDescription">This project is a DIY LED Matrix dashboard inspired by <a class="textLinks" href="https://tidbyt.com">Tydbit</a>. It utlizes periodic api calls to 
@@ -56,6 +55,18 @@
                     </div>
                 </div>
             </div>
+        <div>
+            <h2>Comments: </h2>
+            <form method="post">
+                <label for="signatureName">Name: </label>
+                <input type="text" name="name" id="signatureName" required>
+                <br>
+                <label for="signatureIndex">Signature Index: </label>
+                <input type="text" name="comment" id="comment" required></textarea>
+                <br>
+                <input type="submit" value="submit">
+            </form>
+        </div>
         </div>
     </body>
 </html>

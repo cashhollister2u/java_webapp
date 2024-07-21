@@ -20,7 +20,7 @@ refresh() {
     echo ""
     echo "Build Complete"
     echo ""
-    echo "web page running on http://localhost:8080/$dir_name"
+    echo "web page running on http://localhost:8080/$dir_name/comments"
 }
 
 refresh
