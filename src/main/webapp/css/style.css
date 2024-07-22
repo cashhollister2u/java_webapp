@@ -148,8 +148,8 @@ label {
 
 .projectImages {
     margin-top: 20px;
-    margin-left: -110px;
-    max-width: 240px;
+    margin-left: -13%;
+    max-width: 30%;
     transform: perspective(1000px) rotateY(40deg);
     transition: transform 0.3s ease;
     z-index: 1;
@@ -161,7 +161,7 @@ label {
 }
 
 .projectImages:hover {
-    transform: perspective(1000px) rotateY(0deg) translateX(-90px);
+    transform: perspective(1000px) rotateY(0deg) translateX(-40%);
     z-index: 3;
 }
 
