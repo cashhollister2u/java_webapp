@@ -9,6 +9,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 
 public class WriteToJson {
     private static final String FILE_PATH = "src/main/resources/comments.json";
+    private static final int MAX_COMMENTS = 200;
 
     public static void saveToJsonFile(String name, String comment) throws IOException{
         ObjectMapper objectMapper = new ObjectMapper(); 
@@ -16,6 +17,10 @@ public class WriteToJson {
         ArrayNode commentsArray;
 
         commentsArray = (ArrayNode) objectMapper.readTree(file);
+
+        if (commentsArray.size() >= MAX_COMMENTS) {
+            return;
+        }
 
         // create a new comments node
         ObjectNode commentNode = objectMapper.createObjectNode(); 

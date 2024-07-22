@@ -3,7 +3,6 @@ package com.CashHollister;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class DataServlet extends HttpServlet {

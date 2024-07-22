@@ -62,11 +62,11 @@
                 <form method="post" action="${pageContext.request.contextPath}/comments">
                     <label for="commentName">Name: </label>
                     <br>
-                    <input type="text" name="name" id="commentName" required>
+                    <input type="text" name="name" id="commentName" maxlength="500" required>
                     <br>
                     <label for="comment">New comment: </label>
                     <br>
-                    <textarea type="text" name="comment" id="comment" class="newComment"></textarea>
+                    <textarea type="text" name="comment" id="comment" class="newComment" maxlength="500"></textarea>
                     <br>
                     <input type="submit" value="submit" id="commentSubmit">
                 </form>
