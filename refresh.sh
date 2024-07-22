@@ -21,6 +21,14 @@ refresh() {
     echo "Build Complete"
     echo ""
     echo "web page running on http://localhost:8080/$dir_name/comments"
+
+    url="http://localhost:8080/$dir_name/comments"
+
+    # let tomcat server refresh
+    sleep 1
+
+    # open or refresh browser to the web page
+    open "$url"
 }
 
 refresh
