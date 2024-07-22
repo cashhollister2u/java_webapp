@@ -9,7 +9,6 @@
         <div id="main">
             <div id="header">
                 <a class="links" id="name" href="https://github.com/cashhollister2u">[Cash Hollister]</a>
-                <p>name: ${signatureData.name} </p>
             </div>
             <div id="projects">
                 <h2 class="projectHeader">Projects:</h2>
@@ -56,15 +55,17 @@
                 </div>
             </div>
         <div>
-            <h2>Comments: </h2>
+            <h2 id="commentsHeader">Comments:  </h2>
             <form method="post">
                 <label for="signatureName">Name: </label>
+                <br>
                 <input type="text" name="name" id="signatureName" required>
                 <br>
-                <label for="signatureIndex">Signature Index: </label>
-                <input type="text" name="comment" id="comment" required></textarea>
+                <label for="comment">New comment: </label>
                 <br>
-                <input type="submit" value="submit">
+                <textarea type="text" name="comment" id="comment" required></textarea>
+                <br>
+                <input type="submit" value="submit" id="commentSubmit">
             </form>
         </div>
         </div>

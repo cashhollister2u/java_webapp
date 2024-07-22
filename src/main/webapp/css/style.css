@@ -5,6 +5,30 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
+form {
+    margin-left: 40px;
+}
+
+input {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: dimgray;
+    color: aliceblue;
+}
+label {
+    margin-left: 5px;
+    color: darkgrey;
+}
+
+textarea {
+    width: 60%;
+    height: 150px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: dimgray;
+    color: aliceblue;
+}
+
 #name {
     font-size: xx-large;
 }
@@ -46,6 +70,15 @@ body {
 #gooseDashboard:hover {
     max-width: 500px;
     z-index: 3;
+}
+
+#commentsHeader {
+    color: rgb(75, 84, 221);
+}
+
+#commentSubmit {
+    background-color: white;
+    color:black;
 }
 
 .textLinks {
