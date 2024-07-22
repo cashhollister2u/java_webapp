@@ -3,6 +3,8 @@ package com.CashHollister;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DataServlet extends HttpServlet {
     @Override
@@ -23,11 +25,14 @@ public class DataServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // Handle GET requests here, if needed
-        CommentData commentData = ReadFromJson.readCommentData();
+        //get the list
+        List<CommentData> commentsList = ReadFromJson.readCommentData();
 
         // Set the data as an attribute in the request
-        request.setAttribute("commentData", commentData);
+        request.setAttribute("commentsList", commentsList);
+
+        //Set attrbute for number of comments 
+        request.setAttribute("numberOfComments", commentsList.size());
 
         // Forward the request to the JSP
         RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");

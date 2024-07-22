@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -36,8 +37,8 @@
                         </div>
                         <h3>Description:</h3>
                         <p class="projectDescription">This was my first real project and first ever web development project (the code is a mess). It is a social media clone focused on sharing stock market prefrences. 
-                                                      The project allows the user to create and modify an account, send encrypted messages and follow other users, and track the most common stocks mentioned.
-                                                      I gained indepth knowledge of the structure and communication between the frontend and backend. I was able to gain further insight on the deployment 
+                                                      The project allows the user to create an account, modify an account, send encrypted messages, follow other users, and track the most common stocks mentioned.
+                                                      I gained indepth knowledge on frontend/backend architecture. I was able to gain further insight on the deployment 
                                                       of fullstack web applications and serverside configurations. 
                                                       <br>
                                                       <br>
@@ -69,11 +70,13 @@
                     <br>
                     <input type="submit" value="submit" id="commentSubmit">
                 </form>
-                <h3 class="commentSubHeader">- Posted Comments() -</h3>
-                <div class="postedComments">
-                    <p class="postedName">${commentData.name}</p>
-                    <textarea class="postedComment" readonly>${commentData.comment}</textarea>
-                </div>
+                <h3 class="commentSubHeader">- Posted Comments(${numberOfComments}) -</h3>
+                <c:forEach var="comment" items="${commentsList}">
+                    <div class="postedComments">
+                        <p class="postedName">${comment.name}</p>
+                        <textarea class="postedComment" readonly>${comment.comment}</textarea>
+                    </div>
+                </c:forEach>
             </div>
         </div>
         </div>
