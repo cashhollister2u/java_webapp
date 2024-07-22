@@ -5,12 +5,19 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
+form {
+    border-bottom: 2px solid rgb(30, 30, 30);
+    max-width: 60%;
+    padding-bottom: 20px;
+}
+
 input {
     margin-bottom: 10px;
     margin-top: 10px;
     background-color: dimgray;
     color: aliceblue;
 }
+
 label {
     margin-left: 5px;
     color: darkgrey;
@@ -61,6 +68,11 @@ label {
 
 #commentsHeader {
     color: rgb(75, 84, 221);
+    margin-top: -2px;
+}
+
+#commentName {
+    font-size: medium;
 }
 
 #commentSubmit {
@@ -127,7 +139,7 @@ label {
     color: darkgrey;
     margin-left: 5px;
     font-size: small;
-    max-width: 50%;
+    max-width: 60%;
     padding-bottom: 30px;
     border-bottom: 2px solid rgb(30, 30, 30)
 }
@@ -136,26 +148,45 @@ label {
     margin-left: 40px;
 }
 
+.commentSubHeader {
+    color: rgb(163, 163, 163);
+}
+
 .newComment {
-    width: 60%;
+    width: 80%;
     height: 150px;
     margin-bottom: 10px;
     margin-top: 10px;
     background-color: dimgray;
     color: aliceblue;
+    font-size: medium;
 }
 
 .postedComments {
-    background-color: aliceblue;
-    max-width: 60%;
+    background-color: rgb(30, 30, 30);
+    padding: 10px;
+    width: 50%;
+    height: fit-content;
+    margin-top: 20px;
+    border-radius: 5px;
 }
 
 .postedName {
+    margin-top: 0px;
+    padding: 2px;
     background-color: gray;
-    margin: 10px;
+    width: fit-content;
+    font-size: medium;
+    color: aliceblue;
 }
 
 .postedComment {
+    margin-top: -6px;
     background-color: gray;
-    margin: 10px;
+    height: fit-content;
+    width: 99%;
+    height: fit-content;
+    font-size: medium;
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
 }

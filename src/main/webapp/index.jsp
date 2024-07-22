@@ -57,6 +57,7 @@
         <div>
             <h2 id="commentsHeader">Comments:  </h2>
             <div class="commentsMain">
+                <h3 class="commentSubHeader">- New Comment -</h3>
                 <form method="post" action="${pageContext.request.contextPath}/comments">
                     <label for="commentName">Name: </label>
                     <br>
@@ -68,11 +69,10 @@
                     <br>
                     <input type="submit" value="submit" id="commentSubmit">
                 </form>
-                <div>
-                    <div class="postedComments">
-                        <p class="postedName">${commentData.name}</p>
-                        <textarea class="postedComment" readonly>${commentData.comment}</textarea>
-                    </div>
+                <h3 class="commentSubHeader">- Posted Comments() -</h3>
+                <div class="postedComments">
+                    <p class="postedName">${commentData.name}</p>
+                    <textarea class="postedComment" readonly>${commentData.comment}</textarea>
                 </div>
             </div>
         </div>
