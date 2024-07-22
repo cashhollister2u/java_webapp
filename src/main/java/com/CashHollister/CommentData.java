@@ -2,12 +2,12 @@ package com.CashHollister;
 
 import java.io.IOException;
 
-public class SignatureData {
+public class CommentData {
     private String name;
     private String comment;
 
     // Constructor
-    public SignatureData(String name, String comment) {
+    public CommentData(String name, String comment) {
         this.name = name;
         this.comment = comment;
     }
@@ -17,7 +17,7 @@ public class SignatureData {
         return name;
     }
 
-    public String getSignatureIndex() {
+    public String getComment() {
         return comment;
     }
 

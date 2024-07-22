@@ -56,17 +56,25 @@
             </div>
         <div>
             <h2 id="commentsHeader">Comments:  </h2>
-            <form method="post">
-                <label for="signatureName">Name: </label>
-                <br>
-                <input type="text" name="name" id="signatureName" required>
-                <br>
-                <label for="comment">New comment: </label>
-                <br>
-                <textarea type="text" name="comment" id="comment" required></textarea>
-                <br>
-                <input type="submit" value="submit" id="commentSubmit">
-            </form>
+            <div class="commentsMain">
+                <form method="post" action="${pageContext.request.contextPath}/comments">
+                    <label for="commentName">Name: </label>
+                    <br>
+                    <input type="text" name="name" id="commentName" required>
+                    <br>
+                    <label for="comment">New comment: </label>
+                    <br>
+                    <textarea type="text" name="comment" id="comment" class="newComment"></textarea>
+                    <br>
+                    <input type="submit" value="submit" id="commentSubmit">
+                </form>
+                <div>
+                    <div class="postedComments">
+                        <p class="postedName">${commentData.name}</p>
+                        <textarea class="postedComment" readonly>${commentData.comment}</textarea>
+                    </div>
+                </div>
+            </div>
         </div>
         </div>
     </body>

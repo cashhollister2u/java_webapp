@@ -5,10 +5,6 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
-form {
-    margin-left: 40px;
-}
-
 input {
     margin-bottom: 10px;
     margin-top: 10px;
@@ -18,15 +14,6 @@ input {
 label {
     margin-left: 5px;
     color: darkgrey;
-}
-
-textarea {
-    width: 60%;
-    height: 150px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    background-color: dimgray;
-    color: aliceblue;
 }
 
 #name {
@@ -143,4 +130,32 @@ textarea {
     max-width: 50%;
     padding-bottom: 30px;
     border-bottom: 2px solid rgb(30, 30, 30)
+}
+
+.commentsMain {
+    margin-left: 40px;
+}
+
+.newComment {
+    width: 60%;
+    height: 150px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: dimgray;
+    color: aliceblue;
+}
+
+.postedComments {
+    background-color: aliceblue;
+    max-width: 60%;
+}
+
+.postedName {
+    background-color: gray;
+    margin: 10px;
+}
+
+.postedComment {
+    background-color: gray;
+    margin: 10px;
 }

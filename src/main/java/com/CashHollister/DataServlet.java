@@ -11,30 +11,23 @@ public class DataServlet extends HttpServlet {
         String name = request.getParameter("name");
         String comment = request.getParameter("comment");
 
-    
-        // Create an instance of SignatureData
-        SignatureData signatureData = new SignatureData(name, comment);
+        // Create an instance of commentData
+        CommentData commentData = new CommentData(name, comment);
 
         // Save data to JSON file
-        signatureData.saveToJsonFile();
-
-        // Set the data as an attribute in the request
-        request.setAttribute("signatureData", signatureData);
-
-        // Forward the request to the JSP
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
-        dispatcher.forward(request, response);
+        commentData.saveToJsonFile();
+        
+        // re-route so that the page does not resubmit form on refresh
+        response.sendRedirect(request.getContextPath() + "/comments");
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Handle GET requests here, if needed
-        SignatureData signatureData = new SignatureData("", "");
+        CommentData commentData = ReadFromJson.readCommentData();
 
-        //signatureData.saveToJsonFile();
-        
         // Set the data as an attribute in the request
-        request.setAttribute("signatureData", signatureData);
+        request.setAttribute("commentData", commentData);
 
         // Forward the request to the JSP
         RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
