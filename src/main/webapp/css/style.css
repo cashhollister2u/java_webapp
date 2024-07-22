@@ -8,7 +8,8 @@ body {
 form {
     border-bottom: 2px solid rgb(30, 30, 30);
     max-width: 60%;
-    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 input {
@@ -20,6 +21,7 @@ input {
 
 label {
     margin-left: 5px;
+    margin-top: -25px;
     color: darkgrey;
 }
 
@@ -73,11 +75,39 @@ label {
 
 #commentName {
     font-size: medium;
+    width: 65%;
+    margin-top: -15px;
+}
+
+#newCommentLabel {
+    margin-top: -25px;
 }
 
 #commentSubmit {
     background-color: white;
     color:black;
+    width: fit-content;
+    margin-bottom: 20px;
+    margin-top: -10px;
+}
+
+#charLimitName {
+    display: flex; 
+    justify-content: flex-end;
+    width: 65%;
+    font-size: small;
+    margin-top: -15px;
+    color: dimgray;
+}
+
+#charLimitTextArea {
+    display: flex; 
+    justify-content: flex-end;
+    width: 80%;
+    font-size: small;
+    margin-top: -15px;
+    color: dimgray;
+
 }
 
 .textLinks {
@@ -150,13 +180,14 @@ label {
 
 .commentSubHeader {
     color: rgb(163, 163, 163);
+    margin-bottom: 50px;
 }
 
 .newComment {
     width: 80%;
     height: 150px;
     margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: -15px;
     background-color: dimgray;
     color: aliceblue;
     font-size: medium;
@@ -192,15 +223,4 @@ label {
     font-size: medium;
     color: aliceblue;
     font-family: 'Courier New', Courier, monospace;
-}
-
-.likesContainer {
-    display: flex; 
-    justify-content: flex-end;
-    margin-top: 6px;
-}
-
-.likes{
-    background-color: aliceblue;
-    border-radius: 10px;
 }

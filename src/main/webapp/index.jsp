@@ -62,12 +62,17 @@
                 <form method="post" action="${pageContext.request.contextPath}/comments">
                     <label for="commentName">Name: </label>
                     <br>
-                    <input type="text" name="name" id="commentName" maxlength="500" required>
+                    <input type="text" name="name" id="commentName" maxlength="35" required>
+                    <div id="charLimitName">
+                        <p>(limit: 35)</p>
+                    </div>
                     <br>
-                    <label for="comment">New comment: </label>
+                    <label for="comment" id="newCommentLabel">New comment: </label>
                     <br>
                     <textarea type="text" name="comment" id="comment" class="newComment" maxlength="500" required></textarea>
-                    <br>
+                    <div id="charLimitTextArea">
+                        <p>(limit: 500)</p>
+                    </div>
                     <input type="submit" value="submit" id="commentSubmit">
                 </form>
                 <h3 class="commentSubHeader">- Posted Comments(${numberOfComments}) -</h3>
