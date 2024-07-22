@@ -75,6 +75,9 @@
                     <div class="postedComments">
                         <p class="postedName">${comment.name}</p>
                         <textarea class="postedComment" readonly>${comment.comment}</textarea>
+                        <div class="likesContainer">
+                            <button class="likes">&#x1F44D; ${comment.likes}</button>
+                        </div>
                     </div>
                 </c:forEach>
             </div>

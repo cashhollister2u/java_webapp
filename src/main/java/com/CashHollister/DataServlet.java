@@ -13,7 +13,7 @@ public class DataServlet extends HttpServlet {
         String comment = request.getParameter("comment");
 
         // Create an instance of commentData
-        CommentData commentData = new CommentData(name, comment);
+        CommentData commentData = new CommentData(name, comment, 0);
 
         // Save data to JSON file
         commentData.saveToJsonFile();

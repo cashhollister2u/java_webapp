@@ -2,8 +2,6 @@ package com.CashHollister;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -14,7 +12,7 @@ public class WriteToJson {
     private static final String FILE_PATH = "src/main/resources/comments.json";
     private static final int MAX_COMMENTS = 200;
 
-    public static void saveToJsonFile(String name, String comment) throws IOException{
+    public static void saveToJsonFile(String name, String comment, int likes) throws IOException{
         ObjectMapper objectMapper = new ObjectMapper(); 
         File file = new File(FILE_PATH);
         ArrayNode commentsArray;
@@ -35,7 +33,7 @@ public class WriteToJson {
         ObjectNode commentNode = objectMapper.createObjectNode(); 
         commentNode.put("name", name); 
         commentNode.put("comment", comment); 
-        commentNode.put("likes", 0); 
+        commentNode.put("likes", likes); 
         
 
         // add the comment node to the existing array

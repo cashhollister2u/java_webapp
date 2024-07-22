@@ -27,7 +27,8 @@ public class ReadFromJson {
         for (JsonNode jsonNode : commentsArray) {
             String name = jsonNode.get("name").asText();
             String comment = jsonNode.get("comment").asText();
-            commentsList.add(new CommentData(name, comment));
+            int likes = jsonNode.get("likes").asInt();
+            commentsList.add(new CommentData(name, comment, likes));
         }
         // return the list of comments
         return commentsList;

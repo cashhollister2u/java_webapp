@@ -163,6 +163,8 @@ label {
 }
 
 .postedComments {
+    display: flex;
+    flex-direction: column;
     background-color: rgb(30, 30, 30);
     padding: 10px;
     width: 50%;
@@ -189,4 +191,15 @@ label {
     font-size: medium;
     color: aliceblue;
     font-family: 'Courier New', Courier, monospace;
+}
+
+.likesContainer {
+    display: flex; 
+    justify-content: flex-end;
+    margin-top: 6px;
+}
+
+.likes{
+    background-color: aliceblue;
+    border-radius: 10px;
 }
