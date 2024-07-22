@@ -66,7 +66,7 @@
                     <br>
                     <label for="comment">New comment: </label>
                     <br>
-                    <textarea type="text" name="comment" id="comment" class="newComment" maxlength="500"></textarea>
+                    <textarea type="text" name="comment" id="comment" class="newComment" maxlength="500" required></textarea>
                     <br>
                     <input type="submit" value="submit" id="commentSubmit">
                 </form>
@@ -75,9 +75,6 @@
                     <div class="postedComments">
                         <p class="postedName">${comment.name}</p>
                         <textarea class="postedComment" readonly>${comment.comment}</textarea>
-                        <div class="likesContainer">
-                            <button class="likes">&#x1F44D; ${comment.likes}</button>
-                        </div>
                     </div>
                 </c:forEach>
             </div>

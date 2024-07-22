@@ -180,6 +180,7 @@ label {
     width: fit-content;
     font-size: medium;
     color: aliceblue;
+    border-radius: 3px;
 }
 
 .postedComment {
