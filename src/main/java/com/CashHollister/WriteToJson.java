@@ -2,7 +2,10 @@ package com.CashHollister;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -16,8 +19,14 @@ public class WriteToJson {
         File file = new File(FILE_PATH);
         ArrayNode commentsArray;
 
-        commentsArray = (ArrayNode) objectMapper.readTree(file);
+        JsonNode rootNode = objectMapper.readTree(file);
+        if (rootNode != null && rootNode.isArray()) {
+            commentsArray = (ArrayNode) rootNode;
+        } else {
+            commentsArray = objectMapper.createArrayNode();
+        }
 
+        // handle comments exceeding max limit
         if (commentsArray.size() >= MAX_COMMENTS) {
             return;
         }
@@ -26,6 +35,8 @@ public class WriteToJson {
         ObjectNode commentNode = objectMapper.createObjectNode(); 
         commentNode.put("name", name); 
         commentNode.put("comment", comment); 
+        commentNode.put("likes", 0); 
+        
 
         // add the comment node to the existing array
         commentsArray.add(commentNode);
