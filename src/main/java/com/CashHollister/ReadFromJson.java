@@ -20,14 +20,18 @@ public class ReadFromJson {
     }
 
     public static List<CommentData> readCommentData() throws IOException {
+        // handle json parsing
         ObjectMapper objectMapper = new ObjectMapper();
+        // init empty list
         List<CommentData> commentsList = new ArrayList<>();
+        // verify if in a dev env
         boolean isDevelopment = isDevelopmentEnvironment();
 
-        JsonNode rootNode;
+        JsonNode rootNode;// declare var to hold root node of the parsed json
         if (isDevelopment) {
-            rootNode = objectMapper.readTree(new File(DEV_RESOURCE_PATH));
+            rootNode = objectMapper.readTree(new File(DEV_RESOURCE_PATH)); //read from dev path if in dev env
         } else {
+            // read from class path using input stream when deployed
             InputStream inputStream = getResourceAsStream("comments.json");
             if (inputStream == null) {
                 throw new IOException("Resource not found: comments.json");
@@ -36,10 +40,12 @@ public class ReadFromJson {
             inputStream.close();
         }
 
+        // if the comments list is not as expected return an empty array
         if (rootNode == null || !rootNode.isArray()) {
             return commentsList;
         }
 
+        // package the data and return to be read on screen
         ArrayNode commentsArray = (ArrayNode) rootNode;
         for (JsonNode jsonNode : commentsArray) {
             String name = jsonNode.get("name").asText();
@@ -51,6 +57,7 @@ public class ReadFromJson {
         return commentsList;
     }
 
+    // used to read comments data via input stream
     private static InputStream getResourceAsStream(String resource) {
         return ReadFromJson.class.getClassLoader().getResourceAsStream(resource);
     }
