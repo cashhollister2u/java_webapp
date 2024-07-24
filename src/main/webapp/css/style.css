@@ -184,6 +184,7 @@ label {
 }
 
 .newComment {
+    resize: none;
     width: 80%;
     height: 150px;
     margin-bottom: 10px;
@@ -209,18 +210,20 @@ label {
     padding: 2px;
     background-color: gray;
     width: fit-content;
-    font-size: medium;
+    font-size: large;
     color: aliceblue;
     border-radius: 3px;
 }
 
 .postedComment {
+    border-radius: 2px;
+    resize: none;
     margin-top: -6px;
     background-color: gray;
-    height: fit-content;
     width: 96%;
-    height: fit-content;
+    min-height: 30px;
     font-size: medium;
     color: aliceblue;
     font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
 }
