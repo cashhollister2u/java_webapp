@@ -17,10 +17,10 @@
                     <div id="Project1" class="projectInd">
                         <a class="links" id="projectLinks" href="https://github.com/cashhollister2u/Tidbyt-Open-Sourced">[Tidbyt-Open-Sourced]</a>
                             <div class="imageContainer">
-                                <img id="matrixSpotify" class="projectImages" src="images/martixSpotify.jpeg">
-                                <img id="matrixClock" class="projectImages" src="images/matrixClock.jpeg">
-                                <img id="matrixStock" class="projectImages" src="images/matrixStock.jpeg">
-                                <img id="matrixClockStock" class="projectImages" src="images/matrixClockStock.jpeg">
+                                <img id="matrixSpotify" class="projectImages" src="images/martixSpotify.jpeg" alt="image of spotify view">
+                                <img id="matrixClock" class="projectImages" src="images/matrixClock.jpeg" alt="image of clock view">
+                                <img id="matrixStock" class="projectImages" src="images/matrixStock.jpeg" alt="image of stock view">
+                                <img id="matrixClockStock" class="projectImages" src="images/matrixClockStock.jpeg" alt="image of clock stock view">
                             </div>
                         <h3>Description:</h3>
                         <p class="projectDescription">This project is a DIY LED Matrix dashboard inspired by <a class="textLinks" href="https://tidbyt.com">Tydbit</a>. It utlizes periodic api calls to 
@@ -33,7 +33,7 @@
                         <a class="links" id="miniProjectLinks" href="https://github.com/cashhollister2u/gooseBackend_deployed">[Goose.com Backend Repository]</a>
                         <a class="links" id="miniProjectLinks" href="https://github.com/cashhollister2u/cashhollister2u/releases/tag/v0.1.0">[Goose.com Download]</a>
                         <div class="imageContainer">
-                            <img id="gooseDashboard" src="images/gooseDashboard.png">
+                            <img id="gooseDashboard" src="images/gooseDashboard.png" alt="image of goose app dashboard view">
                         </div>
                         <h3>Description:</h3>
                         <p class="projectDescription">This was my first real project and first ever web development project (the code is a mess). It is a social media clone focused on sharing stock market prefrences. 

@@ -5,9 +5,7 @@ scp -r target/java_webapp cash@cashhollister.info:/tmp
 
 Remote:
 sudo cp -r  /tmp/java_webapp /opt/tomcat/webapps
-
 sudo chown tomcat:tomcat /opt/tomcat/webapps/java_webapp/WEB-INF/classes/comments.json
-
 sudo systemctl restart tomcat
 
 
