@@ -17,10 +17,10 @@
                     <div id="Project1" class="projectInd">
                         <a class="links" id="projectLinks" href="https://github.com/cashhollister2u/Tidbyt-Open-Sourced">[Tidbyt-Open-Sourced]</a>
                             <div class="imageContainer">
-                                <img id="matrixSpotify" class="projectImages" src="images/martixSpotify.png">
-                                <img id="matrixClock" class="projectImages" src="images/matrixClock.png">
-                                <img id="matrixStock" class="projectImages" src="images/matrixStock.png">
-                                <img id="matrixClockStock" class="projectImages" src="images/matrixClockStock.png">
+                                <img id="matrixSpotify" class="projectImages" src="images/martixSpotify.jpeg">
+                                <img id="matrixClock" class="projectImages" src="images/matrixClock.jpeg">
+                                <img id="matrixStock" class="projectImages" src="images/matrixStock.jpeg">
+                                <img id="matrixClockStock" class="projectImages" src="images/matrixClockStock.jpeg">
                             </div>
                         <h3>Description:</h3>
                         <p class="projectDescription">This project is a DIY LED Matrix dashboard inspired by <a class="textLinks" href="https://tidbyt.com">Tydbit</a>. It utlizes periodic api calls to 
