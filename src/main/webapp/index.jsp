@@ -79,7 +79,7 @@
                 <c:forEach var="comment" items="${commentsList}">
                     <div class="postedComments">
                         <p class="postedName">${comment.name}</p>
-                        <textarea class="postedComment" readonly>${comment.comment}</textarea>
+                        <div class="postedComment">${comment.comment}</div>
                     </div>
                 </c:forEach>
             </div>
