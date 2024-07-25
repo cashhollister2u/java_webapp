@@ -22,7 +22,7 @@ echo ""
 # start server before monitoring 
 /usr/local/tomcat9/bin/startup.sh 
 
-# when change occures in "src" dir run the refresh function above
+# when change occures in "src" dir run the refresh script
 find src -type f -not -path "src/main/resources/comments.json" | entr -r bash -c ./refresh.sh
 
 #close server when script ends
