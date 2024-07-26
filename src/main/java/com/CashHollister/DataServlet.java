@@ -11,12 +11,13 @@ public class DataServlet extends HttpServlet {
         // Retrieve parameters from the POST request
         String name = request.getParameter("name");
         String comment = request.getParameter("comment");
-
-        // Create an instance of commentData
-        CommentData commentData = new CommentData(name, comment, 0);
-
-        // Save data to JSON file
-        commentData.saveToJsonFile();
+        int likes = 0;
+        
+        try {
+            WriteToJson.saveToJsonFile(name, comment, likes);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         
         // re-route so that the page does not resubmit form on refresh
         response.sendRedirect(request.getContextPath() + "/comments");
